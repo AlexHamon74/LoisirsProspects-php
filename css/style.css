@@ -1,0 +1,19 @@
+/* PAGE PROFIL */
+.photo{
+    background-image: url(../img/profil.png);
+    background-size: cover;
+    background-position: center;
+}
+
+
+/* PAGE LOGIN */
+.login-bg{
+    background-image: url(../img/login.jpg);
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+}
+.login-bg .container{
+    margin-top: 150px;
+
+}
