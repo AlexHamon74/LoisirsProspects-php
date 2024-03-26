@@ -11,4 +11,4 @@
     <script src="js/index.js"></script>
     <title><?php echo $title; ?></title>
 </head>
-<body>
+<body data-bs-theme="dark">
