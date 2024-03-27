@@ -8,7 +8,7 @@
       <div class="navbar-nav">
         <a class="nav-link" href="index.php">Home</a>
         <a class="nav-link" href="equipe.php">Equipe</a>
-        <a class="nav-link" href="profil.php">Profil</a>
+        <a class="nav-link" href="profil.php?id=1">Profil</a>
       </div>
 
       <li class="nav-item align-items-center d-flex justify-content-lg-end w-100">

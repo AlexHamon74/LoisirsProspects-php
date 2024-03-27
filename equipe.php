@@ -2,7 +2,8 @@
 
 $title = "L'Equipe";
 require_once 'layout/header.php';
-require_once  'layout/nav.php'; ?>
+require_once  'layout/nav.php'; 
+require_once 'data/players.php'; ?>
 
 <!-- Background image -->
 <section class="hero">
@@ -49,36 +50,13 @@ require_once  'layout/nav.php'; ?>
                         <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
                             <div class="accordion-body">
 
-                                <!-- LISTE MEMBRE DE L'EQUIPE A DUPLIQUER -->
-                                <div class="row border-bottom mb-4">
-                                    <div class="col-md-2 col-3">
-                                        <p>N°</p>
-                                    </div>
-                                    <div class="col-md-4 col-9">
-                                        <a href="#">Nom prénom</a>
-                                    </div>
-                                    <div class="col-md-2 col-3">
-                                        <p>Position</p>
-                                    </div>
-                                    <div class="col-md-4 col-9">
-                                        <p>Date de naissance</p>
-                                    </div>
-                                </div>
-
-                                <div class="row border-bottom mb-4">
-                                    <div class="col-md-2 col-3">
-                                        <p>N°</p>
-                                    </div>
-                                    <div class="col-md-4 col-9">
-                                        <a href="#">Nom prénom</a>
-                                    </div>
-                                    <div class="col-md-2 col-3">
-                                        <p>Position</p>
-                                    </div>
-                                    <div class="col-md-4 col-9">
-                                        <p>Date de naissance</p>
-                                    </div>
-                                </div>
+                                
+                                <?php 
+                                foreach ($players as $player) {
+                                require 'templates/players_list.php';
+                                } 
+                                ?>
+                                
 
                             </div>
                         </div>
