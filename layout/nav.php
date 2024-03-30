@@ -1,3 +1,5 @@
+
+
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
   <div class="container">
     <a class="navbar-brand" href="index.php"> <img src="../img/logo.png" width="30px" class="p-0 m-0">       </a>
@@ -8,7 +10,7 @@
       <div class="navbar-nav">
         <a class="nav-link" href="index.php">Home</a>
         <a class="nav-link" href="equipe.php">Equipe</a>
-        <a class="nav-link" href="profil.php?id=1">Profil</a>
+        <a class="nav-link" href="profil.php?id=<?php $id ?>">Profil</a>
       </div>
 
       <li class="nav-item align-items-center d-flex justify-content-lg-end w-100">
@@ -26,3 +28,4 @@
     </div>
   </div>
 </nav>
+
