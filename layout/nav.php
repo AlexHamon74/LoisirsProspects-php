@@ -1,4 +1,4 @@
-
+<?php session_start(); ?>
 
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
   <div class="container">
@@ -10,7 +10,7 @@
       <div class="navbar-nav">
         <a class="nav-link" href="index.php">Home</a>
         <a class="nav-link" href="equipe.php">Equipe</a>
-        <a class="nav-link" href="profil.php?id=<?php $id ?>">Profil</a>
+        <a class="nav-link" href="profil.php?id=<?php echo $_SESSION['user_id'] ?> ">Profil</a>
       </div>
 
       <li class="nav-item align-items-center d-flex justify-content-lg-end w-100">
