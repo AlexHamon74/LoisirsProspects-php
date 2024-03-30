@@ -25,7 +25,8 @@ try{
             $requette->execute(array($email, $password));
 
             if ($requette->rowCount() > 0) {
-                $_SESSION['user_id'] = $requette->fetch()['user_id'];
+               $_SESSION['user_id'] = $requette->fetch()['user_id'];
+                $_SESSION['email'] = $email;
                 header("Location: index.php");
 
             } else {

@@ -12,8 +12,11 @@ require_once  'layout/nav.php'; ?>
                 <div class="text-white">
                     <h1 class="mb-3">Home</h1>
                     <h2 class="mb-3">Les Renards Savoyards</h2>
-                    <a data-mdb-ripple-init class="btn btn-outline-light btn-lg" href="#" role="button">Créer un   evènement
-                    </a>
+                    <h2 class="mb-3">Bonjour <?php echo $_SESSION['email']; ?></h2>
+                    <?php if ($_SESSION['user_id'] === 1) { ?>
+                        <a data-mdb-ripple-init class="btn btn-outline-light btn-lg" href="#" role="button">Créer un evènement
+                        </a>
+                    <?php } ?>
                 </div>
             </div>
         </div>
