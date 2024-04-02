@@ -1,21 +1,15 @@
 <?php
-
 $title = "Login";
-require_once 'layout/header.php'; 
-require_once 'login_process.php'; ?>
+require_once 'layout/header.php'; ?>
 
 
 <section class="login-bg">
     <div class="mask" style="background-color: hsla(0, 0%, 0%, 0.6)">
         <div class="container border rounded-4 p-5" style="max-width: 400px">
+        <h1 class="mb-4">LOGIN</h1>
 
             <form method="POST" action="login_process.php">
                 <div class="mb-3">
-                    <div class="text-center pb-3 fw-bold text-warning fs-5">
-                        <?php if(isset($erreur)){
-                            echo $erreur . "<br>";
-                        } ?>
-                    </div>
                     <label for="email" class="form-label text-white fw-bold">Email address</label>
                     <input type="email" name="email" class="form-control" id="email" required>
                 </div>

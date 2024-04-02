@@ -1,13 +1,11 @@
 <?php
-session_start();
-var_dump(session_status());
+
 $title = "Home";
 require_once 'layout/header.php';
 require_once  'layout/nav.php'; 
-require_once 'login_process.php';
 ?>
 
-<!-- Background image -->
+
 
 <section class="py-5">
     <div class="container">
@@ -54,5 +52,3 @@ require_once 'login_process.php';
 
 
 <?php require_once 'layout/footer.php';
-
-
