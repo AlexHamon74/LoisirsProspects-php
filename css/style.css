@@ -17,5 +17,17 @@
     margin-top: 150px;
 
 }
-/* SIDEBAR */
+
+.nav-lien{
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 600;
+}
+.nav-lien:hover{
+    text-decoration: underline;
+}
+.active{
+    text-decoration: underline;
+}
 

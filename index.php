@@ -1,34 +1,18 @@
 <?php
-
+session_start();
+var_dump(session_status());
 $title = "Home";
 require_once 'layout/header.php';
-require_once  'layout/nav.php'; ?>
+require_once  'layout/nav.php'; 
+require_once 'login_process.php';
+?>
 
 <!-- Background image -->
-<section class="hero">
-    <div class="p-5 text-center bg-image" style="background-image: url(../img/hero.jpg); height: 400px;">
-        <div class="mask" style="background-color: rgba(0, 0, 0, 0.6);">
-            <div class="d-flex justify-content-center align-items-center h-100">
-                <div class="text-white">
-                    <h1 class="mb-3">Home</h1>
-                    <h2 class="mb-3">Les Renards Savoyards</h2>
-                    <h2 class="mb-3">Bonjour <?php echo $_SESSION['email']; ?></h2>
-                    <?php if ($_SESSION['user_id'] === 1) { ?>
-                        <a data-mdb-ripple-init class="btn btn-outline-light btn-lg" href="#" role="button">Créer un evènement
-                        </a>
-                    <?php } ?>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
 
 <section class="py-5">
     <div class="container">
-        <h2 class="text-center mb-4">Calendrier</h2>
+        <h2 class="text-center mb-4">Calendar</h2>
         <div class="row">
-
-
 
             <div class="col-md-3 card p-0">
                 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRuxbBE6vMO6wXK6FLLbvT-ax9JU68XInMhaw&usqp=CAU" class="card-img-top w-100 img-fluid" alt="...">
