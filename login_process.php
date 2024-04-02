@@ -36,6 +36,7 @@ try{
 
             if ($requette->rowCount() > 0) {
                 $_SESSION['user_id'] = $requette->fetch()['user_id'];
+                
                 header('Location: index.php');
 
             } else {

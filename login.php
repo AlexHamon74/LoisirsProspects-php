@@ -12,7 +12,6 @@ require_once 'login_process.php'; ?>
             <form method="POST" action="login_process.php">
                 <div class="mb-3">
                     <div class="text-center pb-3 fw-bold text-warning fs-5">
-                        <?php echo $erreur ?>
                         <?php if(isset($erreur)){
                             echo $erreur . "<br>";
                         } ?>
