@@ -1,7 +1,7 @@
 <?php 
 require_once 'layout/header.php'; ?>
 
-<nav>
+<nav class="sticky-top">
     <div class="p-3 border-bottom bg-body-tertiary">
       <div class="d-flex justify-content-center">
 
