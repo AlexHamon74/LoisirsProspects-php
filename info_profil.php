@@ -19,14 +19,18 @@ require_once 'layout/nav.php';?>
             <label for="licenceNumber" class="form-label text-white fw-bold">Licence number</label>
             <input type="text" name="licenceNumber" id="licenceNumber" class="form-control">
         </div>
-        <div class="mb-3">
-            <label for="height" class="form-label text-white fw-bold">Height in (cm)</label>
-            <input type="number" min="0" max="300" name="height" id="height" class="form-control">
+
+        <div class="d-flex justify-content-evenly gap-3">
+            <div class="mb-3 w-100">
+                <label for="height" class="form-label text-white fw-bold">Height in (cm)</label>
+                <input type="number" min="0" max="300" name="height" id="height" class="form-control">
+            </div>
+            <div class="mb-3 w-100">
+                <label for="weight" class="form-label text-white fw-bold">Weight</label>
+                <input type="number" min="0" max="300" name="weight" id="weight" class="form-control">
+            </div>
         </div>
-        <div class="mb-3">
-            <label for="weight" class="form-label text-white fw-bold">Weight</label>
-            <input type="number" min="0" max="300" name="weight" id="weight" class="form-control">
-        </div>
+
         <div class="mb-3">
             <label for="position" class="form-label text-white fw-bold">Position</label>
             <select class="form-select" aria-label="Default select example" name="position" id="position">

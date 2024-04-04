@@ -32,3 +32,14 @@
     text-decoration: underline;
 }
 
+.card{
+    height: 520px;
+}
+.flyer{
+    height: 250px;
+}
+.logo-team{
+    width: 25px;
+    height: 25px;
+    margin-right: 10px;
+}
