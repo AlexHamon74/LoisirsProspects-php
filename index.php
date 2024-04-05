@@ -9,7 +9,7 @@ require_once  'layout/nav.php';
 
 <section class="py-5">
     <div class="container">
-        <h2 class="text-center mb-4">Calendar</h2>
+        <h1 class="text-center mb-4">Calendar</h1>
         <div class="row p-4">
 
 

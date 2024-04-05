@@ -17,6 +17,7 @@ if (!isset($_POST)) {
 }
 
 //On récupère toutes les infos du formulaire dans un tableau $_POST
+$profilePicture = $_POST['profilePicture'];
 $status = $_POST['status'];
 $licenceNumber = $_POST['licenceNumber'];
 $height = $_POST['height'];
@@ -24,11 +25,11 @@ $weight = $_POST['weight'];
 $position = $_POST['position'];
 $jerseyNumber = $_POST['jerseyNumber'];
 
-$query = "INSERT INTO users (user_status, user_licenceNumber, user_height, user_weight, user_position, user_jerseyNumber) VALUES (?, ?, ?, ?, ?, ?)";
+$query = "INSERT INTO users (user_profile_picture, user_status, user_licence_number, user_height, user_weight, user_position, user_jersey_number) VALUES (?, ?, ?, ?, ?, ?, ?)";
 $stmt = $pdo->prepare($query);
 
 
-$stmt->execute([$status, $licenceNumber, $height, $weight, $position, $jerseyNumber]);
+$stmt->execute([$profilePicture, $status, $licenceNumber, $height, $weight, $position, $jerseyNumber]);
 
 redirect("profil.php");
 

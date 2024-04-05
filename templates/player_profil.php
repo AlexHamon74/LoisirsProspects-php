@@ -43,7 +43,7 @@
                     <h3>  <?php echo $foundplayer['name'] . " " . $foundplayer['firstname'];    ?>      </h3>
                     <h4><?php echo $foundplayer['status'];    ?></h4>
                     <p>2023-2024</p>
-                    <p>N° de licence : <?php echo $foundplayer['licence_number'];    ?></p>
+                    <p>Licence Number : <?php echo $foundplayer['licence_number'];    ?></p>
                 </div>
             </div>
         </div>
@@ -51,12 +51,12 @@
         <div class="row py-4 ">
             <div class="col-md-3 col-6">
                 <div class="border mb-4">
-                    Taille : <?php echo $foundplayer['taille'] . " cm";    ?>
+                    Height : <?php echo $foundplayer['taille'] . " cm";    ?>
                 </div>
             </div>
             <div class="col-md-3 col-6">
                 <div class="border mb-4">
-                    Poids : <?php echo $foundplayer['poids'] . " kg";    ?>
+                    Weight : <?php echo $foundplayer['poids'] . " kg";    ?>
                 </div>
             </div>
             <div class="col-md-3 col-6">
@@ -66,7 +66,7 @@
             </div>
             <div class="col-md-3 col-6">
                 <div class="border mb-4">
-                    Numéro de maillot : <?php echo $foundplayer['number'];    ?>
+                    Jersey Number : <?php echo $foundplayer['number'];    ?>
                 </div>
             </div>
         </div>
@@ -75,11 +75,11 @@
 
 <section class="points py-5">
     <div class="container text-center">
-        <h2 class="mb-4">Mes points</h2>
+        <h2 class="mb-4">Statistics</h2>
         <div class="row">
             <div class="col-12">
                 <div class="border mb-4">
-                <?php echo $foundplayer['buts'] + $foundplayer['passes'] . " Points";    ?>
+                <?php echo $foundplayer['buts'] + $foundplayer['passes'] . " Pts";    ?>
                 </div>
             </div>
         </div>
@@ -87,12 +87,12 @@
         <div class="row">
             <div class="col-6">
                 <div class="border mb-4">
-                    <?php echo $foundplayer['buts'] . " Buts";    ?>
+                    <?php echo $foundplayer['buts'] . " Goals";    ?>
                 </div>
             </div>
             <div class="col-6">
                 <div class="border mb-4">
-                    <?php echo $foundplayer['passes'] . " Passes";    ?>
+                    <?php echo $foundplayer['passes'] . " Assists";    ?>
                 </div>
             </div>
         </div>
@@ -101,11 +101,11 @@
 
 <section class="result py-5">
     <div class="container text-center">
-        <h2 class="mb-4">Mes résultats</h2>
+        <h2 class="mb-4">My Results</h2>
         <div class="row">
             <div class="col-12">
                 <div class="border mb-4">
-                     Matchs joués
+                    Matchs played
                 </div>
             </div>
         </div>
@@ -113,17 +113,17 @@
         <div class="row">
             <div class="col-md-4 col-12">
                 <div class="border mb-4">
-                     victoires
+                    Win
                 </div>
             </div>
             <div class="col-md-4 col-12 mb-4">
                 <div class="border">
-                     Nuls
+                    Draws
                 </div>
             </div>
             <div class="col-md-4 col-12 mb-4">
                 <div class="border">
-                     Défaites
+                    Defeats
                 </div>
             </div>
         </div>
