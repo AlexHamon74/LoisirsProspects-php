@@ -21,7 +21,7 @@ $name = $_POST['name'];
 $firstname = $_POST['firstname'];
 $birthdate = $_POST['birthdate'];
 $email = $_POST['email'];
-$password = $_POST['password'];
+$password = password_hash($_POST['password'], PASSWORD_DEFAULT);
 
 
 //On vérifie si un des champs n'est pas vide
@@ -38,11 +38,16 @@ if (filter_var($email, FILTER_VALIDATE_EMAIL) === false) {
 // ----- SOON -----
 
 
-$query = "INSERT INTO users (user_name, user_firstname, user_birthdate, user_email, user_password) VALUES (?, ?, ?, ?, ?)";
-$stmt = $pdo->prepare($query);
+$query = $pdo->prepare ('INSERT INTO users (user_name, user_firstname, user_birthdate, user_email, user_password) 
+                        VALUES (:name, :firstname, :birthdate, :email, :password)');
 
-$hashedPassword = password_hash($password, PASSWORD_BCRYPT);
+$query->bindValue('name', $name);
+$query->bindValue('firstname', $firstname);
+$query->bindValue('birthdate', $birthdate);
+$query->bindValue('email', $email);
+$query->bindValue('password', $password);
 
-$stmt->execute([$name, $firstname, $birthdate, $email, $hashedPassword]);
+
+$query->execute();
 
 redirect("login.php");

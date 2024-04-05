@@ -1,15 +1,24 @@
 <?php
-
 $title = "Home";
 require_once 'layout/header.php';
 require_once  'layout/nav.php'; 
+require_once 'functions/redirect.php';
+
+
+if ($_SESSION['connected'] == false) {
+    redirect('login.php');
+}
+
+var_dump($_SESSION);
 ?>
+
+
 
 
 
 <section class="py-5">
     <div class="container">
-        <h1 class="text-center mb-4">Calendar</h1>
+        <h2 class="text-center mb-4">Calendar</h2>
         <div class="row p-4">
 
 

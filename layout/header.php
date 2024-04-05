@@ -12,6 +12,6 @@
     <title><?php echo $title; ?></title>
 </head>
 <body data-bs-theme="dark">
-<?php
+<?php session_start(); ?>
 
 

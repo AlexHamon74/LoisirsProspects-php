@@ -20,3 +20,12 @@ Cette page sera donc **accessible seulement par l'admin** pour ajouter un match 
 
  ### Page profil
  Le page la plus importante car elle détient tous les détails des joueurs et principalement **leurs performances**.
+
+
+
+ A TRAVAILLER : 
+
+ - Améliorer le front
+ - Mettre en place les message d'erreurs
+ - Finir l'authentification
+ - 
