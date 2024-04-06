@@ -1,6 +1,6 @@
 <?php
 
-$title = "L'Equipe";
+$title = "Team";
 require_once 'layout/header.php';
 require_once  'layout/nav.php'; 
 require_once 'data/players.php'; ?>
@@ -45,9 +45,9 @@ require_once 'data/players.php'; ?>
 
                                 
                                 <?php 
-                                foreach ($players as $player) {
+                                //Boucle pour afficher tous les users donc id_role = 2
                                 require 'templates/players_list.php';
-                                } 
+                                
                                 ?>
                                 
 

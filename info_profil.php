@@ -11,15 +11,6 @@ require_once 'layout/nav.php';?>
             <input type="file" name="profilePicture" id="profilePicture" class="form-control">
         </div>
         <div class="mb-3">
-            <label for="status" class="form-label text-white fw-bold">Status : *</label>
-            <select class="form-select" aria-label="Default select example" name="status" id="status" required>
-                <option selected>-- Open this select menu --</option>
-                <option value="Player">Player</option>
-                <option value="Coach">Coach</option>
-                <option value="Player / Coach">Player / Coach</option>
-            </select>
-        </div>
-        <div class="mb-3">
             <label for="licenceNumber" class="form-label text-white fw-bold">Licence number : </label>
             <input type="text" name="licenceNumber" id="licenceNumber" class="form-control">
         </div>
@@ -38,7 +29,7 @@ require_once 'layout/nav.php';?>
         <div class="mb-3">
             <label for="position" class="form-label text-white fw-bold">Position : </label>
             <select class="form-select" aria-label="Default select example" name="position" id="position">
-                <option selected>-- Open this select menu --</option>
+                <option value="" selected>-- Open this select menu --</option>
                 <option value="Center">Center (C)</option>
                 <option value="Left Wing">Left Wing (LW)</option>
                 <option value="Right Wing">Right Wing (RW)</option>
