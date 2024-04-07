@@ -27,5 +27,4 @@ Cette page sera donc **accessible seulement par l'admin** pour ajouter un match 
 
  - Améliorer le front
  - Mettre en place les message d'erreurs
- - Finir l'authentification
- - 
+ - Mettre en place la table statistiques

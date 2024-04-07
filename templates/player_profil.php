@@ -1,22 +1,33 @@
 
 <?php
 
+
+    $id = $_SESSION['user_id'];
     $id = $_GET['id'];
 
-    $id = intval($_GET['id']);
 
+    try{
+        $pdo = getConnection();
+        }catch(PDOException $e) {
+            redirect('equipe.php');
+        }
+
+
+    $query = $pdo->prepare('SELECT * FROM users WHERE id_role=2');
+    $query->execute();
+
+    $players = $query->fetchAll();
 
     $foundplayer = null;
 
     foreach ($players as $player){
-        if($player['id']=== $id) {
+        if($player['user_id']== $id) {
             $foundplayer = $player;
         }
     }
 
     //Si l'id du membre n'existe pas, on affiche "Membre non trouvé" sur la page profil
     if ($foundplayer === null) {
-        http_response_code(404);
         echo "Membre non trouvé";
         exit;
     }
@@ -40,10 +51,10 @@
         <div class="row">
             <div class="col-12">
                 <div class="border">
-                    <h3>  <?php echo $foundplayer['name'] . " " . $foundplayer['firstname'];    ?>      </h3>
-                    <h4><?php echo $foundplayer['status'];    ?></h4>
+                    <h3>  <?php echo $foundplayer['user_firstname']. ' ' . $foundplayer['user_name'];?>      </h3>
+                    <h5>birthdate  </h5>
                     <p>2023-2024</p>
-                    <p>Licence Number : <?php echo $foundplayer['licence_number'];    ?></p>
+                    <p>Licence Number : </p>
                 </div>
             </div>
         </div>
@@ -51,22 +62,22 @@
         <div class="row py-4 ">
             <div class="col-md-3 col-6">
                 <div class="border mb-4">
-                    Height : <?php echo $foundplayer['taille'] . " cm";    ?>
+                    Height :
                 </div>
             </div>
             <div class="col-md-3 col-6">
                 <div class="border mb-4">
-                    Weight : <?php echo $foundplayer['poids'] . " kg";    ?>
+                    Weight :
                 </div>
             </div>
             <div class="col-md-3 col-6">
                 <div class="border mb-4">
-                    Position : <?php echo $foundplayer['position'];    ?>
+                    Position :
                 </div>
             </div>
             <div class="col-md-3 col-6">
                 <div class="border mb-4">
-                    Jersey Number : <?php echo $foundplayer['number'];    ?>
+                    Jersey Number :
                 </div>
             </div>
         </div>
@@ -79,7 +90,7 @@
         <div class="row">
             <div class="col-12">
                 <div class="border mb-4">
-                <?php echo $foundplayer['buts'] + $foundplayer['passes'] . " Pts";    ?>
+                    points
                 </div>
             </div>
         </div>
@@ -87,12 +98,12 @@
         <div class="row">
             <div class="col-6">
                 <div class="border mb-4">
-                    <?php echo $foundplayer['buts'] . " Goals";    ?>
+                    goals
                 </div>
             </div>
             <div class="col-6">
                 <div class="border mb-4">
-                    <?php echo $foundplayer['passes'] . " Assists";    ?>
+                    assists
                 </div>
             </div>
         </div>

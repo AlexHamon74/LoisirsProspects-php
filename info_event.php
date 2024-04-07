@@ -21,21 +21,21 @@ require_once 'layout/nav.php'; ?>
                 <input type="text" name="homeTeam" id="homeTeam" class="form-control" required>
             </div>
             <div class="mb-3 w-100">
-                <label for="homeTeamScore" class="form-label text-white fw-bold">Home Team Score : </label>
-                <input type="number" name="homeTeamScore" id="homeTeamScore" class="form-control">
-            </div>
-        </div>
-
-        <div class="d-flex justify-content-evenly gap-3">
-            <div class="mb-3 w-100">
                 <label for="awayTeam" class="form-label text-white fw-bold">Away Team : * </label>
                 <input type="text" name="awayTeam" id="awayTeam" class="form-control" required>
             </div>
-            <div class="mb-3 w-100">
+            <!-- <div class="mb-3 w-100">
+                <label for="homeTeamScore" class="form-label text-white fw-bold">Home Team Score : </label>
+                <input type="number" name="homeTeamScore" id="homeTeamScore" class="form-control">
+            </div> -->
+        </div>
+
+
+            <!-- <div class="mb-3 w-100">
                 <label for="awayTeamScore" class="form-label text-white fw-bold">Away Team Score : </label>
                 <input type="number" name="awayTeamScore" id="awayTeamScore" class="form-control">
-            </div>
-        </div>
+            </div> -->
+
 
         <div class="d-flex justify-content-evenly gap-3">
             <div class="mb-3 w-100">
