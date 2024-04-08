@@ -1,6 +1,24 @@
 <?php 
 require_once 'layout/header.php'; ?>
 
+<!-- <section class="top border-bottom border-top py-2">
+  <div class="container">
+    <div class="row align-items-center text-center">
+      <div class="col-6">
+        <div class="">
+          <h1>LOGO</h1>
+        </div>
+      </div>
+      <div class="col-6">
+        <div class="">
+          <h2>Hello  </h2>
+        </div>
+      </div>
+    </div>
+  </div>
+</section> -->
+
+
 <nav class="sticky-top">
     <div class="p-3 border-bottom bg-body-tertiary">
       <div class="d-flex justify-content-center">

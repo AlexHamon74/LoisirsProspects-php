@@ -1,11 +1,11 @@
 <?php
-$title = "Event's Creation";
+$title = "Game Creation";
 require_once 'layout/header.php';
 require_once 'layout/nav.php'; ?>
 
-<form action="info_event_process.php" method="post">
+<form action="info_game_process.php" method="post">
     <div class="container border rounded-4 p-4 m-5 mx-auto bg-body-tertiary">
-        <h1 class="mb-4">Event's Creation</h1>
+        <h1 class="mb-4">Game Creation</h1>
         <div class="mb-3">
             <label for="img" class="form-label text-white fw-bold">URL Image : </label>
             <input type="file" name="img" id="img" class="form-control">
@@ -24,18 +24,7 @@ require_once 'layout/nav.php'; ?>
                 <label for="awayTeam" class="form-label text-white fw-bold">Away Team : * </label>
                 <input type="text" name="awayTeam" id="awayTeam" class="form-control" required>
             </div>
-            <!-- <div class="mb-3 w-100">
-                <label for="homeTeamScore" class="form-label text-white fw-bold">Home Team Score : </label>
-                <input type="number" name="homeTeamScore" id="homeTeamScore" class="form-control">
-            </div> -->
         </div>
-
-
-            <!-- <div class="mb-3 w-100">
-                <label for="awayTeamScore" class="form-label text-white fw-bold">Away Team Score : </label>
-                <input type="number" name="awayTeamScore" id="awayTeamScore" class="form-control">
-            </div> -->
-
 
         <div class="d-flex justify-content-evenly gap-3">
             <div class="mb-3 w-100">

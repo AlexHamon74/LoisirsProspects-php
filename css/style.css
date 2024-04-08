@@ -1,3 +1,31 @@
+/* .bg-1{
+    background-color: #1d1e31;
+}
+.color-1{
+    color: #1d1e31;
+}
+
+.bg-2{
+    background-color: #fec675;
+}
+.color-2{
+    color: #fec675;
+}
+
+.bg-3{
+    background-color: #353448;
+}
+.color-3{
+    color: #353448;
+}
+
+body{
+    color: #fff;
+    background-color: #1d1e31;
+} */
+
+
+
 /* PAGE PROFIL */
 .photo{
     background-image: url(../img/profil.png);
@@ -16,11 +44,12 @@
 
 
 /* NAVBAR */
+
 .nav-lien{
     text-decoration: none;
-    color: #fff;
     font-size: 18px;
     font-weight: 600;
+    color: #fff;
 }
 .nav-lien:hover{
     text-decoration: underline;

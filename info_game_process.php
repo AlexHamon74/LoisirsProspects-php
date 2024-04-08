@@ -11,11 +11,6 @@ $pdo = getConnection();
 }
 
 
-//On vérifie si on a bien des données
-if (!isset($_POST)) {
-    redirect('info_event.php');
-}
-
 //On récupère toutes les infos du formulaire dans un tableau $_POST
 $img = $_POST['img'];
 $matchNumber = $_POST['matchNumber'];
@@ -25,10 +20,8 @@ $date = $_POST['date'];
 $time = $_POST['time'];
 $matchLocation = $_POST['matchLocation'];
 
-
-if (empty(($img))) {
-    $img = $_SESSION['game_img'];
-}
+// A MODIFIER !!!!!
+$img = null;
 
 
 $query = $pdo->prepare ('INSERT INTO games (
