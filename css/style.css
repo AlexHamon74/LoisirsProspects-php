@@ -1,34 +1,51 @@
-/* .bg-1{
-    background-color: #1d1e31;
+.bg-1{
+    background-color: #18181B;
 }
-.color-1{
-    color: #1d1e31;
-}
-
 .bg-2{
-    background-color: #fec675;
+    background-color: #27272A;
 }
-.color-2{
-    color: #fec675;
+.bordure-e{
+    border-right: 1px solid #344256;
+}
+.bordure-b{
+    border-bottom: 1px solid #344256;
+}
+.bordure-2{
+    border: 1px solid #27272A;
+}
+.bordure-2-b{
+    border-bottom: 1px solid #27272A;
 }
 
-.bg-3{
-    background-color: #353448;
-}
-.color-3{
-    color: #353448;
-}
 
-body{
+/* STYLE DU BOUTON */
+.bouton{
+    font-size: 18px;
+    color: black;
+    font-weight: 600;
+    text-decoration: none;
+    background-color: #fff;
+    padding: 10px 25px;
+    border-radius: 10px;
+}
+.bouton:hover{
+    color: black;
+    background-color: #dadada;
+    transition: 0.2s;
+}
+.lien{
     color: #fff;
-    background-color: #1d1e31;
-} */
-
+    font-weight: 600;
+    text-decoration: none;
+}
+.lien:hover{
+    color: #dadada;
+}
 
 
 /* PAGE PROFIL */
 .photo{
-    background-image: url(../img/profil.png);
+    background-image: url(../img/mcdavid.jpeg);
     background-size: cover;
     background-position: center;
 }
@@ -43,21 +60,6 @@ body{
 }
 
 
-/* NAVBAR */
-
-.nav-lien{
-    text-decoration: none;
-    font-size: 18px;
-    font-weight: 600;
-    color: #fff;
-}
-.nav-lien:hover{
-    text-decoration: underline;
-}
-.active{
-    text-decoration: underline;
-}
-
 .card{
     height: 520px;
 }
@@ -68,4 +70,18 @@ body{
     width: 25px;
     height: 25px;
     margin-right: 10px;
+}
+
+.hover-lien:hover{
+    background-color: #344256;
+}
+
+.img-players{
+    width: 75px;
+    height: 75px;
+    border-radius: 100%;
+    margin: 10px auto;
+    background-image: url(../img/mcdavid.jpeg);
+    background-size: cover;
+    background-position: center;
 }

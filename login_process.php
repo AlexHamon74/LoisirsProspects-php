@@ -11,11 +11,6 @@ $pdo = getConnection();
 }
 
 
-//On vérifie si on a bien des données
-if (!isset($_POST)) {
-    redirect('login.php');
-}
-
 //On récupère toutes les infos du formulaire dans un tableau $_POST
 $email = $_POST['email'];
 $password = $_POST['password'];

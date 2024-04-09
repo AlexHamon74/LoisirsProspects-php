@@ -1,17 +1,25 @@
 <?php
+require_once 'functions/verifierSession.php';
+verifierSession();
 
-$title = "Profil";
+require_once 'functions/redirect.php';
+if( session_status() === PHP_SESSION_ACTIVE && !isset($_SESSION['connected'])) {
+    redirect('login.php');
+}
+
+$title = "Profile";
 require_once 'layout/header.php';
-require_once 'layout/nav.php';
-require_once 'functions/db.php'; 
-require_once 'functions/redirect.php';  
+require_once  'layout/nav.php';
+require_once 'functions/db.php';
 ?>
 
-<section class="py-5">
-    <div class="container">
-        <h1 class="text-center mb-4">Profile</h1>
-    </div>
-</section>
+<div id="layoutSidenav_content">
+
+    <section class="py-5">
+        <div class="container">
+            <h1 class="text-center mb-4">Profile</h1>
+        </div>
+    </section>
 
 
 
