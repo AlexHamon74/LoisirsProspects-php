@@ -8,10 +8,16 @@ require_once 'layout/nav.php'; ?>
     <form action="info_game_process.php" method="post" class="p-4">
         <div class="container border rounded-4 p-4 m-5 mx-auto bg-dark">
             <h1 class="mb-4">Game Creation</h1>
-            <div class="mb-3">
-                <label for="img" class="form-label text-white fw-bold">URL Image : </label>
-                <input type="file" name="img" id="img" class="form-control">
-            </div>
+
+            <?php 
+                if (isset($_SESSION['error'])) {?>
+
+                <div class="mb-3 bg-danger text-center fw-bold  p-2 border border-white text-white">
+
+                <?php echo $_SESSION['error']; ?>
+                </div>
+            <?php } ?>
+
             <div class="mb-3">
                 <label for="matchNumber" class="form-label text-white fw-bold">Match Number : * </label>
                 <input type="number" name="matchNumber" id="matchNumber" class="form-control" required>

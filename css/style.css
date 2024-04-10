@@ -51,13 +51,7 @@
 }
 
 
-/* PAGE LOGIN */
-.login-bg, .register-bg{
-    background-image: url(../img/login.jpg);
-    height: 100vh;
-    background-size: cover;
-    background-position: center;
-}
+
 
 
 .card{

@@ -2,25 +2,30 @@
 session_start();
 require_once __DIR__ . '/functions/db.php';
 require_once __DIR__ . '/functions/redirect.php';
-
-//On tente de se connecter à la base de données
-try{
-$pdo = getConnection();
-}catch(PDOException $e) {
-    redirect('info_event.php');
-}
+require_once __DIR__ . '/functions/checkFields.php';
 
 $homeTeamScore = $_POST['homeTeamScore'];
 $awayTeamScore = $_POST['awayTeamScore'];
 $gameStatus = $_POST['gameStatus'];
 $id = $_GET['id'];
 
+//On tente de se connecter à la base de données
+try{
+$pdo = getConnection();
+}catch(PDOException $e) {
+    $_SESSION['error'] = "Echec de la connexion à la bdd";
+    redirect('form_game_statistics.php?=$id');
+}
+
+
 var_dump($_GET['id']);
 var_dump($_POST);
 
-//Si c'est nul faire des return !!
-if (empty($homeTeamScore) || empty($awayTeamScore) || empty($gameStatus)) {
-    redirect('form_game_statistics.php');
+//On vérifie si un des champs n'est pas vide
+$requiredFields = ['homeTeamScore', 'awayTeamScore', 'gameStatus'];
+if (checkFields($requiredFields)) {
+    $_SESSION['error'] = "Veuillez remplir tous les champs";
+    redirect('form_game_statistics.php?id=$id');
 }
 
 
@@ -36,7 +41,7 @@ $query->bindValue('gameStatus', $gameStatus);
 $query->bindValue('id', $id);
 
 
-
+$_SESSION['error'] = null;
 
 $query->execute();
 

@@ -10,6 +10,14 @@ require_once 'layout/nav.php'; ?>
         <div class="container border rounded-4 p-4 m-5 mx-auto bg-dark">
             <h1 class="mb-4">Game Statistics</h1>
 
+            <?php 
+                if (isset($_SESSION['error'])) {?>
+
+                <div class="mb-3 bg-danger text-center fw-bold p-2 border border-white text-white">
+
+                <?php echo $_SESSION['error']; ?>
+                </div>
+            <?php } ?>
 
             <div class="d-flex justify-content-evenly gap-3">
                 <div class="mb-3 w-100">

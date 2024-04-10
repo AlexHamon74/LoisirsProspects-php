@@ -1,53 +1,70 @@
 <?php
+require_once 'functions/verifierSession.php';
+verifierSession();
 
 require_once __DIR__ . '/functions/db.php';
 require_once __DIR__ . '/functions/redirect.php';
+require_once __DIR__ . '/functions/checkFields.php';
+require_once __DIR__ . '/functions/verifyError.php';
+
 
 //On tente de se connecter à la base de données
 try{
 $pdo = getConnection();
 }catch(PDOException $e) {
+    $_SESSION['error'] = "Echec de la connexion à la bdd";
     redirect('register.php');
 }
 
-
-//On vérifie si on a bien des données
-if (!isset($_POST)) {
-    redirect('register.php');
-}
 
 //On récupère toutes les infos du formulaire dans un tableau $_POST
 $name = $_POST['name'];
 $firstname = $_POST['firstname'];
 $birthdate = $_POST['birthdate'];
 $email = $_POST['email'];
-$password = password_hash($_POST['password'], PASSWORD_DEFAULT);
+$password = $_POST['password'];
 
 
 //On vérifie si un des champs n'est pas vide
-if (empty($name) || empty($firstname) || empty($birthdate) || empty($email) || empty($password) == true) {
+$requiredFields = ['name', 'firstname', 'birthdate', 'email', 'password'];
+if (checkFields($requiredFields)) {
+    $_SESSION['error'] = "Veuillez remplir tous les champs";
     redirect('register.php');
 }
+
 
 //On vérifie si l'adresse mail est valide
 if (filter_var($email, FILTER_VALIDATE_EMAIL) === false) {
+    $_SESSION['error'] = "Veuillez rentrer un email valide";
     redirect('register.php');
 }
 
+
 //On vérifie si l'adresse mail n'est pas un doublon
-// ----- SOON -----
+$stmt = $pdo->prepare('SELECT * FROM users WHERE user_email = :email');
+$stmt->bindValue('email', $email);
+$stmt->execute();
+$user = $stmt->fetch(PDO::FETCH_ASSOC);
+if ($user == true) { 
+    $_SESSION['error'] = "Cet email existe déjà";
+    redirect('register.php');
+}
 
 
-$query = $pdo->prepare ('INSERT INTO users (user_name, user_firstname, user_birthdate, user_email, user_password) 
+$stmt = $pdo->prepare ('INSERT INTO users (user_name, user_firstname, user_birthdate, user_email, user_password) 
                         VALUES (:name, :firstname, :birthdate, :email, :password)');
 
-$query->bindValue('name', $name);
-$query->bindValue('firstname', $firstname);
-$query->bindValue('birthdate', $birthdate);
-$query->bindValue('email', $email);
-$query->bindValue('password', $password);
+$password = password_hash($password, PASSWORD_DEFAULT);
+$stmt->bindValue('name', $name);
+$stmt->bindValue('firstname', $firstname);
+$stmt->bindValue('birthdate', $birthdate);
+$stmt->bindValue('email', $email);
+$stmt->bindValue('password', $password);
 
 
-$query->execute();
+$stmt->execute();
+
+verifyError();
+$_SESSION['success'] = "Votre compte à été enregistré !";
 
 redirect("login.php");
