@@ -15,7 +15,8 @@ require_once 'layout/nav.php'; ?>
 
                 <div class="mb-3 bg-danger text-center fw-bold p-2 border border-white text-white">
 
-                <?php echo $_SESSION['error']; ?>
+                <?php echo $_SESSION['error']; 
+                $_SESSION['error'] = null; ?>
                 </div>
             <?php } ?>
 

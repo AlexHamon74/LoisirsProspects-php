@@ -5,7 +5,6 @@ verifierSession();
 require_once __DIR__ . '/functions/db.php';
 require_once __DIR__ . '/functions/redirect.php';
 require_once __DIR__ . '/functions/checkFields.php';
-require_once __DIR__ . '/functions/verifyError.php';
 
 
 //On tente de se connecter à la base de données

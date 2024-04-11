@@ -5,7 +5,7 @@ require_once 'layout/nav.php';?>
 
 <div id="layoutSidenav_content">
 
-    <form action="info_profil_process.php" method="post" class="p-4">
+    <form action="info_profil_process.php" method="post"  enctype="multipart/form-data" class="p-4">
         <div class="container border rounded-4 p-4 m-5 mx-auto bg-dark">
             <h1 class="mb-4">Info profil</h1>
             <div class="mb-3">

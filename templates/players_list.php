@@ -1,15 +1,15 @@
 
 
 <!-- LISTE MEMBRE DE L'EQUIPE A DUPLIQUER -->
-<div class="row bordure-2-b align-items-center px-4 text-center">
+<div class="row bordure-2-b align-items-center px-4 text-center list-players">
 
 
-    <div class="col-2">
-        <div class="img-players"></div>
+    <div class="col-2 mx-auto  my-3">
+            <img class="card-img rounded-circle" src="../img/mcdavid.jpeg" style="width: 90px; height: 90px;">
     </div>
 
     <div class="col-3">
-        <a href="profil.php?id=<?php echo $player['user_id']; ?>" class="lien">
+        <a href="profil.php?id=<?php echo $player['user_id']; ?>" class="link-light link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">
             <?php echo $player['user_firstname']. ' ' . $player['user_name'];?>
         </a>
     </div>

@@ -49,7 +49,7 @@ require_once 'layout/header.php'; ?>
         </div>
         <div class="sb-sidenav-footer">
             <div class="small">Logged in as:</div>
-            <p class="fs-4 m-0"><?php echo $_SESSION['user_firstname'] ?></p>
+            <p class="m-0"><?php echo $_SESSION['user_firstname'] ?></p>
         </div>
         </nav>
     </div>

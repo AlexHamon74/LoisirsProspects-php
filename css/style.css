@@ -11,7 +11,7 @@
     border-bottom: 1px solid #344256;
 }
 .bordure-2{
-    border: 1px solid #27272A;
+    border: 2px solid #27272A;
 }
 .bordure-2-b{
     border-bottom: 1px solid #27272A;
@@ -33,25 +33,6 @@
     background-color: #dadada;
     transition: 0.2s;
 }
-.lien{
-    color: #fff;
-    font-weight: 600;
-    text-decoration: none;
-}
-.lien:hover{
-    color: #dadada;
-}
-
-
-/* PAGE PROFIL */
-.photo{
-    background-image: url(../img/mcdavid.jpeg);
-    background-size: cover;
-    background-position: center;
-}
-
-
-
 
 
 .card{
@@ -70,12 +51,6 @@
     background-color: #344256;
 }
 
-.img-players{
-    width: 75px;
-    height: 75px;
-    border-radius: 100%;
-    margin: 10px auto;
-    background-image: url(../img/mcdavid.jpeg);
-    background-size: cover;
-    background-position: center;
+.list-players:hover{
+    background-color: #27272A;
 }

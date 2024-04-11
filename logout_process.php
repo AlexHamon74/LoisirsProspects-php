@@ -1,8 +1,9 @@
 <?php
+require_once 'functions/verifierSession.php';
+verifierSession();
 
 require_once 'functions/redirect.php';
 
-session_start();
 
 $_SESSION = [];
 session_destroy();

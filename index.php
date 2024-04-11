@@ -2,8 +2,6 @@
 require_once 'functions/verifierSession.php';
 verifierSession();
 
-require_once 'functions/verifyError.php';
-verifyError();
 
 require_once 'functions/redirect.php';
 if( session_status() === PHP_SESSION_ACTIVE && !isset($_SESSION['connected'])) {
@@ -25,7 +23,6 @@ require_once 'functions/db.php';
                 
 
                     <?php
-
                         try {
                             $pdo = getConnection();
                         } catch(PDOException $e) {
