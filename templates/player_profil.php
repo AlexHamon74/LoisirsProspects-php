@@ -42,7 +42,7 @@
                 <div class="bordure-2 p-3 mb-4">
                     <div class="d-flex">
                         <div class="col-6 text-center">
-                            <img class="card-img rounded-circle" src="../img/mcdavid.jpeg" style="width: 140px; height: 140px;">
+                            <img class="card-img rounded-circle" src="../img/connor.mcdavid.jpeg" style="width: 140px; height: 140px;">
                         </div>
                         <div class="col-6">
                                 <h2><?php echo $foundplayer['user_firstname'] . ' ' . $foundplayer['user_name'];  ?></h2>

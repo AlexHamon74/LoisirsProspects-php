@@ -5,7 +5,7 @@
 
 
     <div class="col-2 mx-auto  my-3">
-            <img class="card-img rounded-circle" src="../img/mcdavid.jpeg" style="width: 90px; height: 90px;">
+            <img class="card-img rounded-circle" src="../img/connor.mcdavid.jpeg" style="width: 90px; height: 90px;">
     </div>
 
     <div class="col-3">

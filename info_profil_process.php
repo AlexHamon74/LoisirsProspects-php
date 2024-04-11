@@ -40,29 +40,29 @@ if (empty(($jerseyNumber))) {
 }
 
 //UPLOAD DE L'IMAGE
-    // if ($profilePicture['error'] != 0) {
-    //     //redirect('form_info_profil.php');
-    // }
+    if ($profilePicture['error'] != 0) {
+        //redirect('form_info_profil.php');
+    }
 
-    // $uploadedInfo = pathinfo($profilePicture['name']);
-    // $uploadedName = $uploadedInfo['filename'];
-    // $uploadedExt = $uploadedInfo['extension'];
-    // $random = TextUtils::randomString(10);
+    $uploadedInfo = pathinfo($profilePicture['name']);
+    $uploadedName = $uploadedInfo['filename'];
+    $uploadedExt = $uploadedInfo['extension'];
+    $random = TextUtils::randomString(10);
 
-    // $filename = $uploadedName . '_' . $random . '.' . $uploadedExt;
-    // $destinationFullPath = 'upload/' . $filename;
+    $filename = $uploadedName . '_' . $random . '.' . $uploadedExt;
+    $destinationFullPath = 'upload/' . $filename;
 
-    // $uploadResult = move_uploaded_file($profilePicture['tmp_name'], $destinationFullPath);
+    $uploadResult = move_uploaded_file($profilePicture['tmp_name'], $destinationFullPath);
 
 
-    // if($uploadResult === false) {
-    //     //redirect('form_info_profil.php');
-    // }
+    if($uploadResult === false) {
+        //redirect('form_info_profil.php');
+    }
 
 
 
 $query = $pdo->prepare ('UPDATE users SET 
-    -- user_profile_picture = :profilePicture, 
+    user_profile_picture = :profilePicture, 
     user_licence_number = :licenceNumber,
     user_height = :height, 
     user_weight = :weight,
@@ -70,7 +70,7 @@ $query = $pdo->prepare ('UPDATE users SET
     user_jersey_number = :jerseyNumber
     WHERE user_id= :id');
 
-//$query->bindValue('profilePicture', $filename);
+$query->bindValue('profilePicture', $filename);
 $query->bindValue('licenceNumber', $licenceNumber);
 $query->bindValue('height', $height);
 $query->bindValue('weight', $weight);
