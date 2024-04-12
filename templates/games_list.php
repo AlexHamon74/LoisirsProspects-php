@@ -49,12 +49,12 @@
 
                 <?php
                 // Convertir la date et l'heure en un format désiré
-                $formatted_date = date('d/m/Y', strtotime($game['game_date']));
-                $formatted_time = date('H:i', strtotime($game['game_time']));
+                $formattedDate = date('d/m/Y', strtotime($game['game_date']));
+                $formattedTime = date('H:i', strtotime($game['game_time']));
                 ?>
             </div>
             <div class="card-body bg-dark rounded-0 fs-5">
-                <p class="card-title"> Le <?php echo $formatted_date . ' à ' . $formatted_time; ?> h</p>
+                <p class="card-title"> Le <?php echo $formattedDate . ' à ' . $formattedTime; ?> h</p>
             </div>
             <div class="card-footer py-4 bg-dark">
                 <a href="#" class="bouton me-2">See more</a>

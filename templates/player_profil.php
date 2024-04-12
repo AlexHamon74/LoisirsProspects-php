@@ -42,11 +42,12 @@
                 <div class="bordure-2 p-3 mb-4">
                     <div class="d-flex">
                         <div class="col-6 text-center">
-                            <img class="card-img rounded-circle" src="../img/connor.mcdavid.jpeg" style="width: 140px; height: 140px;">
+                            <img class="card-img rounded-circle" src="upload/<?php echo $foundplayer['user_profile_picture']; ?>" style="width: 140px; height: 140px;">
                         </div>
                         <div class="col-6">
+                                <?php $formattedDate = date('d/m/Y', strtotime($foundplayer['user_birthdate']));?>
                                 <h2><?php echo $foundplayer['user_firstname'] . ' ' . $foundplayer['user_name'];  ?></h2>
-                                <p> <?php echo $foundplayer['user_birthdate'];  ?> </p>
+                                <p> <?php echo $formattedDate;  ?> </p>
                                 <p>2023-2024</p>
                                 <p>Licence Number<?php echo $foundplayer['user_licence_number'];  ?></p>
                         </div>
@@ -58,7 +59,7 @@
                     <p>Height : <?php echo $foundplayer['user_height'];  ?> cm </p>
                     <p>Weight : <?php echo $foundplayer['user_weight'];  ?> </p>
                     <p>Position : <?php echo $foundplayer['user_position'];  ?> </p>
-                    <p>JerseyNumber : <?php echo $foundplayer['user_jersey_number'];  ?> </p>
+                    <p>JerseyNumber : #<?php echo $foundplayer['user_jersey_number'];  ?> </p>
                 </div>
             </div>
         </div>

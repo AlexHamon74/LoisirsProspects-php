@@ -7,6 +7,17 @@ require_once 'layout/nav.php';?>
 
     <form action="info_profil_process.php" method="post"  enctype="multipart/form-data" class="p-4">
         <div class="container border rounded-4 p-4 m-5 mx-auto bg-dark">
+
+                <?php 
+                    if (isset($_SESSION['error'])) {?>
+
+                        <div class="mb-3 bg-danger text-center fw-bold  p-2 border border-white text-white">
+
+                        <?php echo $_SESSION['error']; 
+                        $_SESSION['error'] = null; ?>
+                        </div>
+                <?php } ?>
+
             <h1 class="mb-4">Info profil</h1>
             <div class="mb-3">
                 <label for="profilePicture" class="form-label text-white fw-bold">Profil Image : </label>

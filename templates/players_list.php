@@ -5,7 +5,7 @@
 
 
     <div class="col-2 mx-auto  my-3">
-            <img class="card-img rounded-circle" src="../img/connor.mcdavid.jpeg" style="width: 90px; height: 90px;">
+            <img class="card-img rounded-circle" src="upload/<?php echo $player['user_profile_picture']; ?>" style="width: 90px; height: 90px;">
     </div>
 
     <div class="col-3">
@@ -14,7 +14,7 @@
         </a>
     </div>
     <div class="col-2">
-        N°   <?php 
+        #<?php 
         if (empty($player['user_jersey_number'])) {
             echo '0';
         }else {

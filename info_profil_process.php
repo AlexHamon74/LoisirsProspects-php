@@ -39,9 +39,27 @@ if (empty(($jerseyNumber))) {
     $jerseyNumber = $_SESSION['user_jersey_number'];
 }
 
+
 //UPLOAD DE L'IMAGE
+if(empty($profilePicture['name'])){
+    if (isset($_SESSION['user_profile_picture'])){
+        $uploadDir = 'upload/';
+        //Le fonction scandir permet de stocker tout les fichiers présent dans /upload dans un array
+        $images = scandir($uploadDir);
+
+        foreach($images as $image) {
+            if ($image === $_SESSION['user_profile_picture']){
+                $filename = $_SESSION['user_profile_picture'];
+                break;
+            }
+        }
+    }
+
+}else{
+
     if ($profilePicture['error'] != 0) {
-        //redirect('form_info_profil.php');
+        $_SESSION['error'] = "Une erreur est survenue";
+        redirect('form_info_profil.php');
     }
 
     $uploadedInfo = pathinfo($profilePicture['name']);
@@ -56,9 +74,17 @@ if (empty(($jerseyNumber))) {
 
 
     if($uploadResult === false) {
-        //redirect('form_info_profil.php');
+        $_SESSION['error'] = "Une erreur est survenue";
+        redirect('form_info_profil.php');
     }
-
+    // Supprimer l'ancienne image du dossier "upload" si elle existe
+    if(isset($_SESSION['user_profile_picture'])) {
+        $oldFilePath = 'upload/' . $_SESSION['user_profile_picture'];
+        if (file_exists($oldFilePath)) {
+            unlink($oldFilePath);
+        }
+    }
+}
 
 
 $query = $pdo->prepare ('UPDATE users SET 

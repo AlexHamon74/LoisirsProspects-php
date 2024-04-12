@@ -25,6 +25,10 @@ Cette page sera donc **accessible seulement par l'admin** pour ajouter un match 
 
  A TRAVAILLER : 
 
- - Améliorer le front
- - Mettre en place les message d'erreurs
- - Mettre en place la table statistiques# test
+#### OBLIGATOIRES !
+ - Mettre en place l'upload de l'image de profil
+ - Factoriser le code (sous forme de classes de préférence)
+
+ #### FACULTATIF !
+ - Mettre en place la table statistiques
+ - Terminer le front de la page profil
