@@ -5,6 +5,7 @@ verifierSession();
 require_once __DIR__ . '/functions/db.php';
 require_once __DIR__ . '/functions/redirect.php';
 require_once __DIR__ . '/functions/checkFields.php';
+require_once 'classes/EmailCheck.php';
 
 
 //On tente de se connecter à la base de données
@@ -18,10 +19,11 @@ $pdo = getConnection();
 
 //On récupère toutes les infos du formulaire dans un tableau $_POST
 $name = $_POST['name'];
-$firstname = $_POST['firstname'];
+$firstname = $_POST['firstname']; 
 $birthdate = $_POST['birthdate'];
 $email = $_POST['email'];
 $password = $_POST['password'];
+
 
 
 //On vérifie si un des champs n'est pas vide
@@ -38,13 +40,10 @@ if (filter_var($email, FILTER_VALIDATE_EMAIL) === false) {
     redirect('register.php');
 }
 
-
-//On vérifie si l'adresse mail n'est pas un doublon
-$stmt = $pdo->prepare('SELECT * FROM users WHERE user_email = :email');
-$stmt->bindValue('email', $email);
-$stmt->execute();
-$user = $stmt->fetch(PDO::FETCH_ASSOC);
-if ($user == true) { 
+// Création de l'objet EmailCheck avec la connexion PDO
+$emailCheck = new EmailCheck($pdo);
+// Utilisation de la méthode checkEmailExists pour vérifier si l'e-mail existe déjà
+if ($emailCheck->checkEmailExists($email)) {
     $_SESSION['error'] = "Cet email existe déjà";
     redirect('register.php');
 }
@@ -63,7 +62,6 @@ $stmt->bindValue('password', $password);
 
 $stmt->execute();
 
-verifyError();
 $_SESSION['success'] = "Votre compte à été enregistré !";
 
 redirect("login.php");

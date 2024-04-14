@@ -23,6 +23,7 @@ require_once 'functions/db.php';
                 
 
                     <?php
+                    var_dump($_SESSION);
                         try {
                             $pdo = getConnection();
                         } catch(PDOException $e) {

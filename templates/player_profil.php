@@ -57,7 +57,7 @@
             <div class="col-lg-6">
                 <div class="bordure-2 p-3 mb-4">
                     <p>Height : <?php echo $foundplayer['user_height'];  ?> cm </p>
-                    <p>Weight : <?php echo $foundplayer['user_weight'];  ?> </p>
+                    <p>Weight : <?php echo $foundplayer['user_weight'];  ?> kg</p>
                     <p>Position : <?php echo $foundplayer['user_position'];  ?> </p>
                     <p>JerseyNumber : #<?php echo $foundplayer['user_jersey_number'];  ?> </p>
                 </div>

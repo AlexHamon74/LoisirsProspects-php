@@ -35,7 +35,9 @@ verifierSession();
 
                             <div class="mb-3 bg-success text-center fw-bold  p-2 border border-white text-white">
 
-                            <?php echo $_SESSION['success']; ?>
+                            <?php echo $_SESSION['success']; 
+                            $_SESSION['success'] = null; ?>
+                            
                             </div>
                     <?php } ?>
 
@@ -49,6 +51,9 @@ verifierSession();
                         <div class="mb-3">
                             <label for="password" class="form-label text-white fw-bold">Password</label>
                             <input type="password" name="password" class="form-control" id="password" required>
+                        </div>
+                        <div class="mb-3 d-flex justify-content-end">
+                            <a href="register.php" class="link-light link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">Créer un compte</a>
                         </div>
                         <button type="submit" class="btn btn-warning btn-rounded" name="ok">Se Connecter</button>
                     </form>
