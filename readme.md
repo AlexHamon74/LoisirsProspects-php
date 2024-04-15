@@ -1,7 +1,6 @@
 # Bienvenue sur Loisirs Prospects
 
 ## Contexte : Application qui gère une saison sportive pour une équipe
-L'idée de cette application est qu'elle corresponde à une équipe.
 Les users pourrait voir les matchs passés et à venir, tous les joueurs de l'équipe et une page profil contenant leurs statistiques collectives et individuelles.
 Pour débuter sur PHP je pense que ce projet était un peu trop élevé pour mon niveau mais je pense avoir rendu un résultat à la hauteur de mes compétences après 5 semaines de PHP.
 
@@ -22,7 +21,7 @@ Pour la page register et login c'est avant tout de vérifier si les champs sont 
 Ensuite je vérifie si l'adresse mail est valide et si ce n'est pas un doublon dans la page register.
 
 
-## Etape 3 : ** Construction du site **
+## Etape 3 : Construction du site 
 Arriver à ce stade j'avais déjà passer beacoup de temps sur le projet à tenter de faire marcher mon code et je voyais que mettre en place toutes le fonctionnalités allait être long et difficle.
 
 ### Page d'accueil / Calendrier
