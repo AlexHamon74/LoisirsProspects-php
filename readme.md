@@ -34,7 +34,7 @@ L'étape de modification aura été très longue :
  Dans le même idée que les matchs j'ai dû ajouter un update pour que les users puissent ajouter des infos personnelles dans leur page profil.
 
 ### Page Equipe
- Une page contenant une brève présentation de l'équipe et le liste de tous les membres.
+ Une page contenant la liste de tous les joueurs.
  Chaque membre est cliquable et directement lié a la page profil du joueur.
 
 ## Etape 4 : **Le problème**
