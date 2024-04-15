@@ -8,27 +8,27 @@ Pour débuter sur PHP je pense que ce projet était un peu trop élevé pour mon
 compétences après 5 semaines de PHP.
 
 
-## Etape 1 : ** J'aime le front **
-    Pour débuter mon projet **PHP** je commence avec ... **du front.**
-    Cela me permet de m'imaginer la strcture de mon site et de me projeter plus facilement.
-    Je commence aussi par me créer un shéma de base de données qui ne sera finalement pas très utiles car 3 tables suffiront pour 
-    là ou j'ai stopper mon projet.
+## Etape 1 : J'aime le front 
+Pour débuter mon projet **PHP** je commence avec ... **du front.**
+Cela me permet de m'imaginer la strcture de mon site et de me projeter plus facilement.
+Je commence aussi par me créer un shéma de base de données qui ne sera finalement pas très utiles car 3 tables suffiront pour 
+là ou j'ai stopper mon projet.
 
-    Une fois mes pages créer j'ai décider de m'exercer a PDO avec un bdd fictive en php afin d'afficher tous les users ainsi que leurs 
-    informations personnelles.
+Une fois mes pages créer j'ai décider de m'exercer a PDO avec un bdd fictive en php afin d'afficher tous les users ainsi que leurs 
+informations personnelles.
 
 
-## Etape 2 : ** A la conquête de PHP **
-    Après m'être amusé avec bootstrap il était temps de commencer PHP en relation avec PhpMyAdmin et de créer mes pages register et login.
+## Etape 2 : A la conquête de PHP 
+Après m'être amusé avec bootstrap il était temps de commencer PHP en relation avec PhpMyAdmin et de créer mes pages register et login.
 ### Page Register / Login
-    Une fois les deux pages fonctionnelles j'ai du réfléchir à sécuriser les formulaires.
-    Pour la page register et login c'est avant tout de vérifier si les champs sont bien "isset" et pas "empty".
-    Ensuite je vérifie si l'adresse mail est valide ainsi et si c'est pas un doublon dans la page register.
+Une fois les deux pages fonctionnelles j'ai du réfléchir à sécuriser les formulaires.
+Pour la page register et login c'est avant tout de vérifier si les champs sont bien "isset" et pas "empty".
+Ensuite je vérifie si l'adresse mail est valide ainsi et si c'est pas un doublon dans la page register.
 
 
 ## Etape 3 : ** La construction de la 8e merveille **
-    Arriver à ce stade j'avais déjà passer beacoup de temps sur le projet à tenter de faire marcher mon code et je voyais que 
-    mettre en place toutes le fonctionnalités allait être long et difficle.
+Arriver à ce stade j'avais déjà passer beacoup de temps sur le projet à tenter de faire marcher mon code et je voyais que 
+mettre en place toutes le fonctionnalités allait être long et difficle.
 
 ### Page d'accueil / Calendrier
 Une page visible par tous afin de voir les match à venir ainsi que les matchs passés.
