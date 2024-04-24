@@ -30,6 +30,9 @@ L'admin aura la possibilité de créer un match à venir et de modifié un match
 L'étape de modification aura été très longue : 
 * J'ai d'abord dû utiliser un "update" pour modifier un match
 * De savoir quel match je modifiais : Pour ça j'ai rentré l'id du match dans un "$_GET" dans le value d'un bouton.
+
+![alt text](index.PNG)
+
  ### Page profil
  Dans le même idée que les matchs j'ai dû ajouter un update pour que les users puissent ajouter des infos personnelles dans leur page profil.
 
