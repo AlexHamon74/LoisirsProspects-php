@@ -36,9 +36,13 @@ L'étape de modification aura été très longue :
  ### Page profil
  Dans le même idée que les matchs j'ai dû ajouter un update pour que les users puissent ajouter des infos personnelles dans leur page profil.
 
+ ![alt text](profil.PNG)
+
 ### Page Equipe
  Une page contenant la liste de tous les joueurs.
  Chaque membre est cliquable et directement lié a la page profil du joueur.
+
+ ![alt text](team.PNG)
 
 ## Etape 4 : **Le problème**
 A ce moment-là mon code marchait mais c'était un gros chantier. Illisible.
